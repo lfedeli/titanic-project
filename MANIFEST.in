@@ -1,0 +1,20 @@
+include *.txt
+include *.md
+include *.pkl
+recursive-include ./logistic_model/*
+
+include logistic_model/datasets/titanic.csv
+include logistic_model/datasets/titanic_test.csv
+include logistic_model/trained_models/*.pkl
+include logistic_model/VERSION
+include logistic_model/config.yml
+
+include ./requirements/requirements.txt
+include ./requirements/test_requirements.txt
+exclude *.log
+exclude *.cfg
+exclude *.swp
+exclude *.swo
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

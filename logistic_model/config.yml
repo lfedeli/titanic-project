@@ -1,0 +1,51 @@
+# Package Overview
+package_name: logistic_model 
+
+# Data Files
+training_data_file: titanic.csv 
+test_data_file: titanic_test.csv 
+
+# Variables
+# The variable we are attempting to predict (sale price)
+target: survived
+
+pipeline_name: logistic_model 
+pipeline_save_file: logistic_model_output_v
+
+features:
+  - pclass
+  - sex
+  - age
+  - sibsp
+  - parch
+  - fare
+  - cabin
+  - embarked
+  - title
+
+to_drop:
+  - name
+  - ticket
+  - boat
+  - body
+  - home.dest
+
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 0
+C: 0.0005
+
+numerical_variables:
+  - age 
+  - fare
+
+categorical_variables: 
+  - sex 
+  - embarked 
+  - title 
+  - cabin
+
+cabin:
+  - cabin
